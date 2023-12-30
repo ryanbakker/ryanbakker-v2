@@ -79,6 +79,7 @@ export type Project = {
   githubUrl: string;
   demoUrl: string;
   tools: [string];
+
   organizer: {
     _id: string;
     firstName: string;
@@ -111,4 +112,31 @@ export type RemoveUrlQueryParams = {
 export type SearchParamProps = {
   params: { id: string };
   searchParams: { [key: string]: string | string[] | undefined };
+};
+
+export type CheckoutOrderParams = {
+  projectTitle: string;
+  projectId: string;
+  price: string;
+  isFree: boolean;
+  buyerId: string;
+};
+
+export type CreateOrderParams = {
+  stripeId: string;
+  projectId: string;
+  buyerId: string;
+  totalAmount: string;
+  createdAt: Date;
+};
+
+export type GetOrdersByProjectParams = {
+  projectId: string;
+  searchString: string;
+};
+
+export type GetOrdersByUserParams = {
+  userId: string | null;
+  limit?: number;
+  page: string | number | null;
 };
