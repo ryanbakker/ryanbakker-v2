@@ -4,6 +4,7 @@ import { ArrowUpRight, FileEdit } from "lucide-react";
 import Link from "next/link";
 import { DeleteConfirmation } from "./DeleteConfirmation";
 import CategoryLabel from "./CategoryLabel";
+import Image from "next/image";
 
 type CardProps = {
   project: IProject;
@@ -21,9 +22,16 @@ function Card({ project, hasOrderLink, hidePrice }: CardProps) {
     <div className="group relative flex min-h-[380px] w-full max-w-[400px] flex-col overflow-hidden rounded-xl bg-gradient-to-tr from-indigo-950 to-indigo-900 shadow-md transition-all hover:shadow-2xl md:min-h-[438px] cursor-pointer ">
       <Link
         href={`/projects/${project._id}`}
-        style={{ backgroundImage: `url(${project.imageUrl})` }}
-        className="flex items-center justify-center flex-grow bg-gray-50 bg-cover bg-center text-gray-500"
-      />
+        className="overflow-hidden max-h-[260px]"
+      >
+        <Image
+          src={project.imageUrl}
+          alt={project.title}
+          width={200}
+          height={100}
+          className="flex items-center justify-center flex-grow bg-gray-50 bg-cover bg-center text-gray-500 w-full flex-1"
+        />
+      </Link>
 
       {isProjectCreator && !hidePrice && (
         <div className="absolute right-2 top-2 flex flex-col gap-4 rounded-xl bg-white p-3 shadow-sm transition-all">
@@ -46,7 +54,7 @@ function Card({ project, hasOrderLink, hidePrice }: CardProps) {
           >
             <CategoryLabel category={project.category.name} />
             <div className="h-full flex flex-col justify-end gap-5">
-              <p className="line-clamp-2 flex-1 text-white text-2xl font-bold">
+              <p className="line-clamp-2 text-white text-2xl font-bold">
                 {project.title}
               </p>
               <p className="line-clamp-2 text-white/70 font-light">

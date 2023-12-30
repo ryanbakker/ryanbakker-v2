@@ -23,13 +23,9 @@ async function Projects({ searchParams }: SearchParamProps) {
         <div className="wrapper flex h-full flex-col gap-4">
           <Heading title="Projects" />
 
-          <p className="max-w-[60%] font-light">
-            View a selection of my projects, a couple of which contributed to my
-            diplomas. Most projects are built using Next.js, with the rest using
-            WordPress or bare HTML code. Some projects contain links to GitHub
-            repos or even the live build on Vercel. If you have any queries,
-            feel free to get in touch using the contact section. Or view my
-            GitHub profile here.
+          <p className="max-w-[40%] font-light">
+            Below is a selection of my web projects. You can find an overview
+            and links to the GitHub repo and Vercel deployment.
           </p>
         </div>
 
