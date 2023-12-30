@@ -50,6 +50,7 @@ function AboutSection() {
           alt="Ryan Bakker Portrait"
           width={400}
           height={600}
+          className="rounded-md"
         />
       </div>
 

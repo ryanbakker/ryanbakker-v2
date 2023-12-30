@@ -70,119 +70,19 @@
   .wrapper {
     @apply max-w-7xl lg:mx-auto p-5 md:px-10 xl:px-0 w-full;
   }
-}
 
-.title {
-  font-size: clamp(2em, 8vw, 3.8em);
-  text-transform: uppercase;
-  position: relative;
-  margin: 0;
-  line-height: 1.1em;
-  font-weight: 400;
-}
-
-.title_span {
-  position: relative;
-  font-weight: 600;
-  z-index: 1;
-  background: linear-gradient(250deg, #00baf1, #f16dff, #00baf1);
-  background-size: auto;
-  background-size: 600% 600%;
-  animation: BluePinkGradient 6s ease infinite;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-
-#typewriter {
-  overflow: hidden;
-  white-space: nowrap;
-  margin: 0;
-  letter-spacing: 0.01em;
-}
-
-#typewriter::after {
-  content: "";
-  padding-right: 6px;
-  right: 0;
-  border-right: 0.01em solid;
-  animation: blink-caret 0.8s step-end infinite;
-  animation-fill-mode: forwards;
-}
-
-.typewriter-line {
-  display: block;
-  position: absolute;
-  right: 0;
-}
-
-.typewriter-line .typewriter-line::after {
-  content: "";
-  display: inline-block;
-  width: 0;
-  height: 100%;
-  visibility: hidden;
-}
-
-.hide-cursor #typewriter::after {
-  content: "";
-  display: inline-block;
-  width: 0;
-  height: 100%;
-  visibility: hidden;
-  display: none;
-}
-
-.hide-cursor::after {
-  content: "";
-  display: none;
-}
-
-.stop-cursor-animation #typewriter::after {
-  border-color: transparent !important;
-  animation: none !important;
-  content: "";
-  display: inline-block;
-  width: 0;
-  height: 100%;
-}
-
-.hide-cursor .typewriter-line::after {
-  display: none;
-}
-
-.stop-cursor-animation .typewriter-line::after {
-  border-color: transparent !important;
-  animation: none !important;
-}
-
-@keyframes BluePinkGradient {
-  0% {
-    background-position: 0% 50%;
+  .input-field {
+    @apply bg-gray-200 dark:bg-slate-700 dark:placeholder:text-slate-300 dark:text-slate-100 h-[54px] focus-visible:ring-offset-0 placeholder:text-gray-600 text-slate-950 rounded-md  px-4 py-3 border-none autofill:bg-gray-800 focus-visible:ring-transparent !important;
   }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 
-@keyframes typing {
-  from {
-    width: 0;
+  .textarea {
+    @apply bg-gray-200 dark:bg-slate-700 dark:placeholder:text-slate-300 dark:text-slate-100 flex flex-1 placeholder:text-gray-400 text-slate-950 px-4 py-3 rounded-md  !important;
   }
-  to {
-    width: 100%;
-  }
-}
 
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  65% {
-    border-color: white;
+  .title-accent {
+    @apply bg-gradient-to-tr from-indigo-700 to-indigo-300;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
   }
 }

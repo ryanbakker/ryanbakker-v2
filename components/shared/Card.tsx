@@ -1,0 +1,75 @@
+import { IProject } from "@/lib/database/models/project.model";
+import { auth } from "@clerk/nextjs";
+import { ArrowUpRight, FileEdit } from "lucide-react";
+import Link from "next/link";
+import { DeleteConfirmation } from "./DeleteConfirmation";
+import CategoryLabel from "./CategoryLabel";
+
+type CardProps = {
+  project: IProject;
+  hasOrderLink?: boolean;
+  hidePrice?: boolean;
+};
+
+function Card({ project, hasOrderLink, hidePrice }: CardProps) {
+  const { sessionClaims } = auth();
+  const userId = sessionClaims?.userId as string;
+
+  const isProjectCreator = userId === project.organizer._id.toString();
+
+  return (
+    <div className="group relative flex min-h-[380px] w-full max-w-[400px] flex-col overflow-hidden rounded-xl bg-gradient-to-tr from-indigo-950 to-indigo-900 shadow-md transition-all hover:shadow-2xl md:min-h-[438px] cursor-pointer ">
+      <Link
+        href={`/projects/${project._id}`}
+        style={{ backgroundImage: `url(${project.imageUrl})` }}
+        className="flex items-center justify-center flex-grow bg-gray-50 bg-cover bg-center text-gray-500"
+      />
+
+      {isProjectCreator && !hidePrice && (
+        <div className="absolute right-2 top-2 flex flex-col gap-4 rounded-xl bg-white p-3 shadow-sm transition-all">
+          <Link
+            href={`/projects/${project._id}/update`}
+            className="text-black hover:text-black/50 transition-all"
+          >
+            <FileEdit size={20} />
+          </Link>
+
+          <DeleteConfirmation projectId={project._id} />
+        </div>
+      )}
+
+      <div className="flex min-h-[180px] flex-col justify-between gap-3 p-5 md:gap-4">
+        <div className="flex flex-col gap-3 h-full">
+          <Link
+            href={`/projects/${project._id}`}
+            className="flex flex-col justify-between min-h-[150px]"
+          >
+            <CategoryLabel category={project.category.name} />
+            <div className="h-full flex flex-col justify-end gap-5">
+              <p className="line-clamp-2 flex-1 text-white text-2xl font-bold">
+                {project.title}
+              </p>
+              <p className="line-clamp-2 text-white/70 font-light">
+                {project.description}
+              </p>
+            </div>
+          </Link>
+        </div>
+
+        <div className="flex flex-row justify-between items-end">
+          {hasOrderLink && (
+            <Link
+              href={`/orders?projectId=${project._id}`}
+              className="gap-2 bg-white w-fit flex items-center py-1 px-3 rounded-md mt-4 hover:bg-slate-300 transition-all line-clamp-1"
+            >
+              <p className="text-slate-900">Order Details</p>
+              <ArrowUpRight size={16} />
+            </Link>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Card;

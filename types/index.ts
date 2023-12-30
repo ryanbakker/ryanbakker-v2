@@ -25,7 +25,6 @@ export type CreateProjectParams = {
     categoryId: string;
     githubUrl: string;
     demoUrl: string;
-    tools: [string];
   };
   path: string;
 };
@@ -40,7 +39,6 @@ export type UpdateProjectParams = {
     categoryId: string;
     githubUrl: string;
     demoUrl: string;
-    tools: [string];
   };
   path: string;
 };
@@ -78,7 +76,6 @@ export type Project = {
   categoryId: string;
   githubUrl: string;
   demoUrl: string;
-  tools: [string];
 
   organizer: {
     _id: string;

@@ -1,50 +1,13 @@
-"use client";
-
-import { useEffect } from "react";
-
-const Title = () => {
-  useEffect(() => {
-    const headline = document.getElementById("typewriter");
-
-    if (headline) {
-      const text = headline.innerHTML;
-      const lines = text.split("\n");
-      headline.innerHTML = "";
-
-      setTimeout(() => {
-        lines.forEach((line, i) => {
-          const lineElement = document.createElement("span");
-          headline.appendChild(lineElement);
-
-          line.split("").forEach((letter, j) => {
-            setTimeout(() => {
-              lineElement.innerHTML += letter;
-            }, 90 * j);
-          });
-
-          if (i < lines.length - 1) {
-            headline.appendChild(document.createElement("br"));
-          }
-        });
-      }, 1500);
-
-      setTimeout(() => {
-        headline.classList.add("hide-cursor");
-      }, 5500);
-    }
-  }, []);
-
+function Title() {
   return (
-    <h1 className="title text-indigo-950 dark:text-white !font-semibold">
-      Hi I&apos;m Ryan, <br /> A{" "}
-      <span
-        className="title_span after:border-r-purple-500 dark:after:border-r-white"
-        id="typewriter"
-      >
+    <h1 className="text-6xl font-medium uppercase leading-[5rem]">
+      Hi I'm Ryan, <br /> A{" "}
+      <span className="relative font-bold px-3 rounded-md title-accent z-10 ml-2">
         Web Developer
+        <div className="bg-indigo-700/20 absolute left-0 top-0 h-full w-full -z-10 rounded-md" />
       </span>
     </h1>
   );
-};
+}
 
 export default Title;

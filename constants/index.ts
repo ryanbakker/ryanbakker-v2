@@ -20,3 +20,12 @@ export const headerLinks = [
     route: "/resume",
   },
 ];
+
+export const projectDefaultValues = {
+  title: "",
+  description: "",
+  imageUrl: "",
+  categoryId: "",
+  githubUrl: "",
+  demoUrl: "",
+};
