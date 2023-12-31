@@ -40,7 +40,7 @@ function AboutText() {
 
         <Button
           onClick={toggleShowMore}
-          className="w-fit bg-transparent text-white pl-0 py-3 my-2"
+          className="w-fit bg-transparent text-white pl-0 py-3 my-2 active:bg-transparent focus:bg-transparent focus-visible:bg-transparent"
         >
           {!showMore ? (
             <p className="flex flex-row items-center">
