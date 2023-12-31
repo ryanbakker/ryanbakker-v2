@@ -34,8 +34,8 @@ async function Projects({ params: { id }, searchParams }: SearchParamProps) {
             <Image
               src={project.imageUrl}
               alt="Project"
-              width={750}
-              height={750}
+              width={850}
+              height={850}
               className="h-full w-full object-cover object-center"
             />
 
@@ -53,42 +53,47 @@ async function Projects({ params: { id }, searchParams }: SearchParamProps) {
                 </div>
               )}
 
-              <div className="flex flex-col gap-5">
+              <div className="flex flex-col gap-8">
                 <CategoryLabel category={project.category.name} />
                 <div>
-                  <h2 className="text-3xl font-bold pb-1 uppercase">
+                  <h2 className="text-2xl md:text-3xl font-bold pb-1 uppercase">
                     {project.title}
                   </h2>
-                  <p className="italic text-gray-400">
+                  <p className="italic text-gray-400 text-sm">
                     Published: {formatDate(project.createdAt)}
                   </p>
                 </div>
               </div>
 
-              <div className="flex flex-row gap-3 items-center">
-                {project.githubUrl && (
-                  <Link
-                    href={project.githubUrl}
-                    target="_blank"
-                    className="bg-indigo-700/40 w-fit py-1 px-4 rounded-md text-violet-300 font-medium hover:bg-indigo-500/40 transition-all"
-                  >
-                    GitHub Repo
-                  </Link>
-                )}
+              <div className="pt-2">
+                <h5 className="font-extralight text-white/70 text-sm pb-2">
+                  Links
+                </h5>
+                <div className="flex flex-row gap-3 items-center">
+                  {project.githubUrl && (
+                    <Link
+                      href={project.githubUrl}
+                      target="_blank"
+                      className="bg-indigo-700/40 w-fit py-1 px-4 rounded-md text-violet-300 font-medium hover:bg-indigo-500/40 transition-all"
+                    >
+                      GitHub Repo
+                    </Link>
+                  )}
 
-                {project.demoUrl && (
-                  <Link
-                    href={project.demoUrl}
-                    target="_blank"
-                    className="bg-indigo-700/40 w-fit py-1 px-4 rounded-md text-violet-300 font-medium hover:bg-indigo-500/40 transition-all"
-                  >
-                    Live Demo
-                  </Link>
-                )}
+                  {project.demoUrl && (
+                    <Link
+                      href={project.demoUrl}
+                      target="_blank"
+                      className="bg-indigo-700/40 w-fit py-1 px-4 rounded-md text-violet-300 font-medium hover:bg-indigo-500/40 transition-all"
+                    >
+                      Live Demo
+                    </Link>
+                  )}
+                </div>
               </div>
 
-              <div className="flex flex-col gap-3">
-                <h5 className="font-light text-white/80 text-sm">
+              <div className="flex flex-col gap-2 pb-4 pt-2">
+                <h5 className="font-extralight text-white/70 text-sm">
                   Project Overview
                 </h5>
                 <p>{project.description}</p>

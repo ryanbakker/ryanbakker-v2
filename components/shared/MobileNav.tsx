@@ -44,7 +44,7 @@ function MobileNav() {
           <div className="dark:bg-white bg-indigo-600 w-[30px] h-[3px] rounded-xl" />
           <span className="dark:bg-white bg-indigo-600 w-[22px] h-[3px] rounded-xl" />
         </SheetTrigger>
-        <SheetContent className="border-l bg-gradient-to-tr from-indigo-900  to-slate-800 flex flex-col w-full gap-10 items-center">
+        <SheetContent className="border-none bg-gradient-to-tr from-indigo-900  to-slate-800 flex flex-col w-full gap-10 items-center">
           <SheetHeader>
             <SheetTitle className="uppercase text-3xl text-white">
               Ryan Bakker
@@ -70,7 +70,7 @@ function MobileNav() {
           </ul>
           <SheetFooter>
             <SheetClose>
-              <Button className="bg-slate-100 text-slate-800 hover:bg-slate-300">
+              <Button className="bg-indigo-500 text-white" size="lg">
                 Close Menu
               </Button>
             </SheetClose>

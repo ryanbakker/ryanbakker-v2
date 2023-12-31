@@ -21,7 +21,7 @@ function HeroSection() {
             </p>
           </div>
           <div className="flex items-end justify-center my-10 md:my-10 md:justify-end">
-            <div className="px-5 pt-8 rounded-xl bg-gradient-to-tr from-indigo-900 via-slate-900 to-slate-800">
+            <div className="px-5 pt-8 rounded-xl rounded-b-xl bg-gradient-to-tr from-indigo-900 via-slate-900 to-slate-800">
               <Image
                 src="/assets/images/ryan-bakker-head.webp"
                 alt="Headshot"
@@ -33,7 +33,7 @@ function HeroSection() {
             </div>
           </div>
 
-          <div className="flex flex-col items-center md:flex-row gap-4 pt-10 px-20 md:px-0">
+          <div className="flex flex-col items-center md:flex-row gap-4 pb-6 md:pb-0 md:pt-10">
             <Button
               size="lg"
               className="bg-indigo-600 hover:bg-indigo-800 transition-all text-white md:px-12 w-full md:w-fit"

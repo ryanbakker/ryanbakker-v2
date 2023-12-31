@@ -29,7 +29,7 @@ async function ProjectSection() {
           />
         </div>
 
-        <div className="flex flex-col md:flex-row gap-4 px-20 md:px-0 items-center">
+        <div className="flex flex-col md:flex-row gap-4 md:px-0 items-center">
           <Button
             size="lg"
             className="px-10 bg-indigo-600 hover:bg-indigo-800 transition-all text-white w-full md:w-fit"

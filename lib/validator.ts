@@ -5,7 +5,7 @@ export const projectFormSchema = z.object({
   description: z
     .string()
     .min(3, "Description must be at least 3 characters")
-    .max(500, "Description must be less than 500 characters"),
+    .max(601, "Description must be less than 600 characters"),
   imageUrl: z.string(),
   categoryId: z.string(),
   githubUrl: z.string(),

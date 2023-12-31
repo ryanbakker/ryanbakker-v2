@@ -8,7 +8,7 @@ function ResumeSection() {
       <div className="wrapper p-5 rounded-lg flex flex-col lg:flex-row justify-between z-50">
         <div>
           <div className="relative">
-            <span className="absolute bottom-0 text-6xl opacity-20 font-bold uppercase text-gray-500 dark:opacity-15">
+            <span className="absolute bottom-0 text-6xl opacity-20 font-bold uppercase text-gray-500 dark:opacity-20">
               Resume
             </span>
             <h3 className="text-4xl font-semibold uppercase text-white">
@@ -16,16 +16,16 @@ function ResumeSection() {
             </h3>
           </div>
           <p className="mt-5 text-white mr-10">
-            Check out my resume for my education and experience, or view my
-            projects on GitHub.
+            Check out my resume for my education and experience, or my projects
+            on GitHub.
           </p>
         </div>
 
-        <div className="flex flex-row gap-5 relative">
+        <div className="flex flex-col md:flex-row md:gap-5 relative">
           <Button asChild size="lg">
             <Link
               href="/resume"
-              className="flex gap-2 mt-6 w-fit bg-white text-indigo-900 hover:text-white z-[100]"
+              className="flex gap-2 mt-6 w-full md:w-fit bg-white text-indigo-900 hover:text-white z-[100]"
               target="_blank"
             >
               <FileText /> Go To Resume
@@ -34,7 +34,7 @@ function ResumeSection() {
           <Button asChild size="lg">
             <Link
               href="/resume"
-              className="flex gap-2 mt-6 w-fit z-[100]"
+              className="flex gap-2 mt-6 w-full md:w-fit z-[100]"
               target="_blank"
             >
               <Github /> GitHub

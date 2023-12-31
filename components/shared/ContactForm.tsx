@@ -64,7 +64,7 @@ export default function ContactForm() {
           ></textarea>
           <Button
             type="submit"
-            className="w-fit px-10 bg-indigo-600 text-white hover:bg-indigo-800"
+            className="w-full md:w-fit px-10 bg-indigo-600 text-white hover:bg-indigo-800"
           >
             Submit Form
           </Button>

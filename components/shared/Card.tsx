@@ -21,14 +21,14 @@ function Card({ project }: CardProps) {
     <div className="group relative flex min-h-[380px] w-full max-w-[400px] flex-col overflow-hidden rounded-xl bg-gradient-to-tr from-indigo-950 to-indigo-900 shadow-md transition-all hover:shadow-2xl md:min-h-[438px] cursor-pointer ">
       <Link
         href={`/projects/${project._id}`}
-        className="overflow-hidden max-h-[260px]"
+        className="overflow-hidden max-h-[260px] flex items-center w-full justify-center"
       >
         <Image
           src={project.imageUrl}
           alt={project.title}
           width={200}
           height={100}
-          className="flex items-center justify-center flex-grow bg-gray-50 bg-cover bg-center text-gray-500 w-full flex-1"
+          className="w-full"
         />
       </Link>
 
