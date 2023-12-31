@@ -9,11 +9,9 @@ import { formatDate } from "@/lib/utils";
 
 type CardProps = {
   project: IProject;
-  hasOrderLink?: boolean;
-  hidePrice?: boolean;
 };
 
-function Card({ project, hasOrderLink, hidePrice }: CardProps) {
+function Card({ project }: CardProps) {
   const { sessionClaims } = auth();
   const userId = sessionClaims?.userId as string;
 
@@ -34,7 +32,7 @@ function Card({ project, hasOrderLink, hidePrice }: CardProps) {
         />
       </Link>
 
-      {isProjectCreator && !hidePrice && (
+      {isProjectCreator && (
         <div className="absolute right-2 top-2 flex flex-col gap-4 rounded-xl bg-white p-3 shadow-sm transition-all">
           <Link
             href={`/projects/${project._id}/update`}

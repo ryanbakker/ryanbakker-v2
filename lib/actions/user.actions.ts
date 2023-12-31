@@ -6,7 +6,6 @@ import { conntectToDB } from "../database";
 import User from "../database/models/user.model";
 import Project from "../database/models/project.model";
 import { revalidatePath } from "next/cache";
-import Order from "../database/models/order.model";
 
 export async function createUser(user: CreateUserParams) {
   try {
@@ -67,12 +66,6 @@ export async function deleteUser(clerkId: string) {
       Project.updateMany(
         { _id: { $in: userToDelete.projects } },
         { $pull: { organizer: userToDelete._id } }
-      ),
-
-      // Update the 'orders' collection to remove references to the user
-      Order.updateMany(
-        { _id: { $in: userToDelete.orders } },
-        { $unset: { buyer: 1 } }
       ),
     ]);
 

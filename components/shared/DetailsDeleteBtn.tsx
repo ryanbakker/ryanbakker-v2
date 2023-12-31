@@ -26,7 +26,7 @@ export const DetailsDeleteBtn = ({ projectId }: { projectId: string }) => {
         <Trash2 size={20} /> Delete
       </AlertDialogTrigger>
 
-      <AlertDialogContent className="bg-white">
+      <AlertDialogContent className="bg-slate-800">
         <AlertDialogHeader>
           <AlertDialogTitle>Are you sure you want to delete?</AlertDialogTitle>
           <AlertDialogDescription className="p-regular-16 text-grey-600">
@@ -43,7 +43,7 @@ export const DetailsDeleteBtn = ({ projectId }: { projectId: string }) => {
                 await deleteProject({ projectId, path: pathname });
               })
             }
-            className="bg-red-500 hover:bg-red-700"
+            className="bg-red-500 hover:bg-red-700 text-white"
           >
             {isPending ? "Deleting..." : "Confirm"}
           </AlertDialogAction>
