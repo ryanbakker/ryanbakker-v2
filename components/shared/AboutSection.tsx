@@ -5,7 +5,7 @@ import Heading from "./Heading";
 
 function AboutSection() {
   return (
-    <section className="relative py-2">
+    <section className="relative py-2" id="about">
       <div className="max-w-7xl lg:mx-auto px-5 md:px-10 xl:px-0 w-full flex flex-col md:flex-row justify-between items-center">
         <div className="my-8 flex flex-col justify-center">
           <Heading title="About Me" />

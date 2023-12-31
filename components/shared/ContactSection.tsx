@@ -3,7 +3,7 @@ import ContactForm from "./ContactForm";
 
 function ContactSection() {
   return (
-    <section className="wrapper">
+    <section className="wrapper" id="contact">
       <div className="py-5 mr-10 flex flex-col gap-5 max-w-[700px]">
         <Heading title="Contact" />
         <p className="font-light">
