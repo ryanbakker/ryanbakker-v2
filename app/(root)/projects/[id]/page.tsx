@@ -34,8 +34,8 @@ async function Projects({ params: { id }, searchParams }: SearchParamProps) {
             <Image
               src={project.imageUrl}
               alt="Project"
-              width={1000}
-              height={1000}
+              width={750}
+              height={750}
               className="h-full w-full object-cover object-center"
             />
 

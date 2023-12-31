@@ -26,9 +26,9 @@ function HeroSection() {
               <Image
                 src="/assets/images/ryan-bakker-head.webp"
                 alt="Headshot"
-                width={500}
-                height={500}
-                className="md:max-w-[350px]"
+                width={250}
+                height={250}
+                className="w-[500px] md:max-w-[350px]"
                 loading="eager"
               />
             </div>

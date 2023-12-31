@@ -48,9 +48,9 @@ function AboutSection() {
         <Image
           src="/assets/images/ryan-bakker-portrait.webp"
           alt="Ryan Bakker Portrait"
-          width={450}
-          height={600}
-          className="rounded-md md:max-w-[400px]"
+          width={200}
+          height={350}
+          className="rounded-md w-[450px] md:max-w-[400px]"
         />
       </div>
 
