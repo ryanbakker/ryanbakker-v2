@@ -1,6 +1,7 @@
 import CategoryLabel from "@/components/shared/CategoryLabel";
 import Collection from "@/components/shared/Collection";
 import { DetailsDeleteBtn } from "@/components/shared/DetailsDeleteBtn";
+import ProjectDescription from "@/components/shared/ProjectDescription";
 import {
   getProjectById,
   getRelatedProjectsByCategory,
@@ -74,7 +75,7 @@ async function Projects({ params: { id }, searchParams }: SearchParamProps) {
                     <Link
                       href={project.githubUrl}
                       target="_blank"
-                      className="bg-indigo-700/40 w-fit py-1 px-4 rounded-md text-violet-300 font-medium hover:bg-indigo-500/40 transition-all"
+                      className="bg-indigo-500/40 w-fit py-1 px-4 rounded-md text-violet-100 font-medium hover:bg-indigo-500/40 transition-all"
                     >
                       GitHub Repo
                     </Link>
@@ -84,7 +85,7 @@ async function Projects({ params: { id }, searchParams }: SearchParamProps) {
                     <Link
                       href={project.demoUrl}
                       target="_blank"
-                      className="bg-indigo-700/40 w-fit py-1 px-4 rounded-md text-violet-300 font-medium hover:bg-indigo-500/40 transition-all"
+                      className="bg-indigo-500/40 w-fit py-1 px-4 rounded-md text-violet-100 font-medium hover:bg-indigo-500/40 transition-all"
                     >
                       Live Demo
                     </Link>
@@ -96,7 +97,8 @@ async function Projects({ params: { id }, searchParams }: SearchParamProps) {
                 <h5 className="font-extralight text-white/70 text-sm">
                   Project Overview
                 </h5>
-                <p>{project.description}</p>
+                {/* <p>{project.description}</p> */}
+                <ProjectDescription description={project.description} />
               </div>
             </div>
           </div>

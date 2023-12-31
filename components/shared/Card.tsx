@@ -18,10 +18,10 @@ function Card({ project }: CardProps) {
   const isProjectCreator = userId === project.organizer._id.toString();
 
   return (
-    <div className="group relative flex min-h-[380px] w-full max-w-[400px] flex-col overflow-hidden rounded-xl bg-gradient-to-tr from-indigo-950 to-indigo-900 shadow-md transition-all hover:shadow-2xl md:min-h-[438px] cursor-pointer ">
+    <div className="group relative flex min-h-[300px] w-full max-w-[400px] flex-col overflow-hidden rounded-xl bg-gradient-to-tr from-indigo-950 to-indigo-900 shadow-md transition-all hover:shadow-2xl md:min-h-[438px] cursor-pointer ">
       <Link
         href={`/projects/${project._id}`}
-        className="overflow-hidden max-h-[260px] flex items-center w-full justify-center shadow-md"
+        className="overflow-hidden max-h-[250px] flex items-center w-full justify-center shadow-md"
       >
         <Image
           src={project.imageUrl}
@@ -45,11 +45,11 @@ function Card({ project }: CardProps) {
         </div>
       )}
 
-      <div className="flex min-h-[180px] flex-col justify-between gap-3 p-5 md:gap-4">
+      <div className="flex flex-col justify-between gap-3 p-5 md:gap-4">
         <div className="flex flex-col gap-3 h-full">
           <Link
             href={`/projects/${project._id}`}
-            className="flex flex-col justify-between min-h-[150px]"
+            className="flex flex-col justify-between min-h-[130px]"
           >
             <CategoryLabel category={project.category.name} />
             <div className="h-full flex flex-col justify-end gap-5">

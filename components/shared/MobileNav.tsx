@@ -4,8 +4,6 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
-  SheetDescription,
-  SheetFooter,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -13,9 +11,10 @@ import {
 import { Button } from "../ui/button";
 import { headerLinks } from "@/constants";
 import { usePathname } from "next/navigation";
-import Link from "next/link";
 import { ThemeToggler } from "../ThemeToggler";
 import { SignedIn, UserButton } from "@clerk/nextjs";
+import Link from "next/link";
+import { AtSign, Github, Linkedin } from "lucide-react";
 
 function MobileNav() {
   const pathname = usePathname();
@@ -62,7 +61,7 @@ function MobileNav() {
                   <SheetClose asChild>
                     <Link
                       href={link.route}
-                      className={`w-full text-indigo-600 bg-indigo-50 py-3 text-center rounded-md text-lg ${
+                      className={`w-full text-indigo-600 bg-indigo-50 py-3 text-center rounded-md text-lg font-semibold ${
                         isActive && "bg-indigo-700 text-white"
                       }`}
                     >
@@ -72,6 +71,17 @@ function MobileNav() {
                 </li>
               );
             })}
+            <li className="flex flex-row gap-8 pt-4 text-white">
+              <Link href="https://github.com/ryanbakker">
+                <Github strokeWidth={2.5} size={30} aria-label="GitHub" />
+              </Link>
+              <Link href="mailto:ryanbakker@outlook.co.nz">
+                <AtSign strokeWidth={2.5} size={30} aria-label="Email" />
+              </Link>
+              <Link href="https://www.linkedin.com/in/ryan-bakker/">
+                <Linkedin strokeWidth={2.2} size={30} aria-label="LinkedIn" />
+              </Link>
+            </li>
           </ul>
         </SheetContent>
       </Sheet>

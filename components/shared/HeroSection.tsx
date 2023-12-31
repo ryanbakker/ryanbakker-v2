@@ -33,7 +33,7 @@ function HeroSection() {
             </div>
           </div>
 
-          <div className="flex flex-col items-center md:flex-row gap-4 pb-6 md:pb-0 md:pt-10">
+          <div className="flex flex-col items-center md:flex-row gap-4 pb-6 md:pb-10">
             <Button
               size="lg"
               className="bg-indigo-600 hover:bg-indigo-800 transition-all text-white md:px-12 w-full md:w-fit"
@@ -41,7 +41,9 @@ function HeroSection() {
               <Link href="/#projects">Projects</Link>
             </Button>
             <Button size="lg" className="w-full md:w-fit md:px-10">
-              <Link href="/#contact">Get In Touch</Link>
+              <Link href="https://github.com/ryanbakker" target="_blank">
+                GitHub
+              </Link>
             </Button>
           </div>
 
