@@ -1,7 +1,6 @@
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
-import React from "react";
 import { Button } from "../ui/button";
 import { formUrlQuery } from "@/lib/utils";
 
@@ -32,7 +31,7 @@ const Pagination = ({ page, totalPages, urlParamName }: PaginationProps) => {
       <Button
         size="lg"
         variant="outline"
-        className="w-28"
+        className="pagination-btn"
         onClick={() => onClick("prev")}
         disabled={Number(page) <= 1}
       >
@@ -41,7 +40,7 @@ const Pagination = ({ page, totalPages, urlParamName }: PaginationProps) => {
       <Button
         size="lg"
         variant="outline"
-        className="w-28"
+        className="pagination-btn"
         onClick={() => onClick("next")}
         disabled={Number(page) >= totalPages}
       >

@@ -1,6 +1,6 @@
-import { IProject } from "@/lib/database/models/project.model";
 import Card from "./Card";
 import Pagination from "./Pagination";
+import { IProject } from "@/lib/database/models/project.model";
 
 type CollectionProps = {
   data: IProject[];

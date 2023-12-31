@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "../ui/button";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Send } from "lucide-react";
 
 export default function ContactForm() {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -64,9 +64,9 @@ export default function ContactForm() {
           ></textarea>
           <Button
             type="submit"
-            className="w-full md:w-fit px-10 bg-indigo-600 text-white hover:bg-indigo-800"
+            className="w-full md:w-fit px-10 bg-indigo-600 text-white hover:bg-indigo-800 flex flex-row items-center gap-2"
           >
-            Submit Form
+            Submit Form <Send size={15} />
           </Button>
         </form>
       )}

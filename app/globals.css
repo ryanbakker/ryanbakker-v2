@@ -84,7 +84,7 @@
   }
 
   .contact-textarea {
-    @apply bg-gray-200 dark:bg-slate-700 dark:placeholder:text-slate-300 dark:text-slate-100 flex flex-1 placeholder:text-gray-400 text-slate-950 px-4 py-3 rounded-md focus:outline-none focus:outline-indigo-700 !important;
+    @apply bg-gray-200 dark:bg-slate-700 dark:placeholder:text-slate-300 dark:text-slate-100 flex flex-1 placeholder:text-gray-600 text-slate-950 px-4 py-3 rounded-md focus:outline-none focus:outline-indigo-700 !important;
   }
 
   .title-accent {
@@ -106,5 +106,13 @@
 
   .text-destructive {
     @apply text-red-500;
+  }
+
+  .cross-pattern {
+    @apply pattern-cross dark:pattern-gray-600 pattern-gray-700 pattern-bg-indigo-300 pattern-size-8 pattern-opacity-10 dark:pattern-opacity-5 h-full w-full absolute -z-10 left-0 top-0 dark:pattern-bg-black;
+  }
+
+  .pagination-btn {
+    @apply w-28 bg-slate-700 text-white hover:bg-slate-900 dark:hover:bg-slate-500 transition-all !important;
   }
 }

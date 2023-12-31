@@ -41,7 +41,7 @@ function AboutText() {
         <Button
           asChild
           onClick={toggleShowMore}
-          className="w-fit bg-darkBlue px-0 text-white py-1 my-2 active:bg-transparent focus:bg-transparent focus-visible:bg-transparent cursor-pointer hover:bg-darkBlue"
+          className="w-fit bg-[#EEEEEE] dark:bg-darkBlue px-0 text-black dark:text-white py-1 my-2 active:bg-transparent focus:bg-transparent focus-visible:bg-transparent cursor-pointer hover:bg-darkBlue"
         >
           {!showMore ? (
             <p className="flex flex-row items-center">

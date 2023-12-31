@@ -1,8 +1,10 @@
 import CategoryLabelLink from "@/components/shared/CategoryLabelLink";
 import Collection from "@/components/shared/Collection";
-import { DetailsDeleteBtn } from "@/components/shared/DetailsDeleteBtn";
 import Heading from "@/components/shared/Heading";
 import ProjectDescription from "@/components/shared/ProjectDescription";
+import Image from "next/image";
+import Link from "next/link";
+import { DetailsDeleteBtn } from "@/components/shared/DetailsDeleteBtn";
 import {
   getProjectById,
   getRelatedProjectsByCategory,
@@ -10,9 +12,8 @@ import {
 import { formatDate } from "@/lib/utils";
 import { SearchParamProps } from "@/types";
 import { auth } from "@clerk/nextjs";
-import { FileEdit } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
+import { FileEdit, Github } from "lucide-react";
+import { Link as LinkIcon } from "lucide-react";
 
 async function Projects({ params: { id }, searchParams }: SearchParamProps) {
   const { sessionClaims } = auth();
@@ -71,17 +72,14 @@ async function Projects({ params: { id }, searchParams }: SearchParamProps) {
               </div>
 
               <div className="pt-2">
-                <h5 className="font-extralight text-white/70 text-sm pb-2">
-                  Links
-                </h5>
                 <div className="flex flex-row gap-3 items-center">
                   {project.githubUrl && (
                     <Link
                       href={project.githubUrl}
                       target="_blank"
-                      className="bg-indigo-500/40 w-fit py-1 px-4 rounded-md text-violet-300 hover:bg-indigo-500/60 transition-all"
+                      className="bg-indigo-500/40 w-fit py-1 px-4 rounded-md text-violet-300 hover:bg-indigo-500/60 transition-all flex flex-row gap-2 items-center"
                     >
-                      GitHub Repo
+                      <Github size={18} /> GitHub Repo
                     </Link>
                   )}
 
@@ -89,9 +87,9 @@ async function Projects({ params: { id }, searchParams }: SearchParamProps) {
                     <Link
                       href={project.demoUrl}
                       target="_blank"
-                      className="bg-indigo-500/40 w-fit py-1 px-4 rounded-md text-violet-300 hover:bg-indigo-500/60 transition-all"
+                      className="bg-indigo-500/40 w-fit py-1 px-4 rounded-md text-violet-300 hover:bg-indigo-500/60 transition-all flex flex-row gap-2 items-center"
                     >
-                      Live Demo
+                      <LinkIcon size={18} /> Live Demo
                     </Link>
                   )}
                 </div>
@@ -123,7 +121,7 @@ async function Projects({ params: { id }, searchParams }: SearchParamProps) {
             totalPages={1} // Disables pagination
           />
         </div>
-        <div className="pattern-cross pattern-gray-600 pattern-bg-white pattern-size-8 pattern-opacity-5 h-full w-full absolute -z-10 left-0 top-0 dark:pattern-bg-black" />
+        <div className="cross-pattern" />
       </section>
     </>
   );

@@ -3,6 +3,7 @@ import Heading from "./Heading";
 import Collection from "./Collection";
 import { Button } from "../ui/button";
 import { getAllProjects } from "@/lib/actions/project.actions";
+import { Github, PanelsTopLeft } from "lucide-react";
 
 async function ProjectSection() {
   const projects = await getAllProjects({
@@ -34,11 +35,16 @@ async function ProjectSection() {
             size="lg"
             className="px-10 bg-indigo-600 hover:bg-indigo-800 transition-all text-white w-full md:w-fit"
           >
-            <Link href="/projects">View Projects</Link>
+            <Link href="/projects" className="flex flex-row gap-2 items-center">
+              <PanelsTopLeft size={22} /> Go to Projects
+            </Link>
           </Button>
           <Button size="lg" className="px-10 w-full md:w-fit">
-            <Link href="https://github.com/ryanbakker?tab=repositories">
-              GitHub Repos
+            <Link
+              href="https://github.com/ryanbakker?tab=repositories"
+              className="flex flex-row gap-2 items-center"
+            >
+              <Github size={22} /> GitHub Repos
             </Link>
           </Button>
         </div>

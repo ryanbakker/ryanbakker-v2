@@ -26,7 +26,7 @@ async function UpdateProject({ params: { id } }: UpdateProjectProps) {
           </p>
         </div>
 
-        <div className="pattern-cross pattern-gray-600 pattern-bg-white pattern-size-8 pattern-opacity-5 h-full w-full absolute -z-10 left-0 top-0 dark:pattern-bg-black" />
+        <div className="cross-pattern" />
       </section>
 
       <ProjectsForm

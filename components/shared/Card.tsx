@@ -1,10 +1,10 @@
-import { IProject } from "@/lib/database/models/project.model";
-import { auth } from "@clerk/nextjs";
-import { ArrowUpRight, FileEdit } from "lucide-react";
 import Link from "next/link";
-import { DeleteConfirmation } from "./DeleteConfirmation";
 import CategoryLabel from "./CategoryLabel";
 import Image from "next/image";
+import { IProject } from "@/lib/database/models/project.model";
+import { auth } from "@clerk/nextjs";
+import { FileEdit } from "lucide-react";
+import { DeleteConfirmation } from "./DeleteConfirmation";
 import { formatDate } from "@/lib/utils";
 
 type CardProps = {

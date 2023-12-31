@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className="bg-white dark:bg-[#1A1C29]">
+        <body className="bg-[#EEEEEE] dark:bg-[#1A1C29]">
           <ThemeProvider
             attribute="class"
             defaultTheme="system"

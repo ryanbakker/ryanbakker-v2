@@ -1,8 +1,8 @@
 import Image from "next/image";
-import React from "react";
-import { Button } from "../ui/button";
 import Link from "next/link";
 import Title from "./Title";
+import { Button } from "../ui/button";
+import { Github, PanelsTopLeft } from "lucide-react";
 
 function HeroSection() {
   return (
@@ -36,18 +36,27 @@ function HeroSection() {
           <div className="flex flex-col items-center md:flex-row gap-4 pb-6 md:pb-10">
             <Button
               size="lg"
-              className="bg-indigo-600 hover:bg-indigo-800 transition-all text-white md:px-12 w-full md:w-fit"
+              className="bg-indigo-600 hover:bg-indigo-800 transition-all text-white md:px-12 w-full md:w-fit text-base"
             >
-              <Link href="/#projects">Projects</Link>
+              <Link
+                href="/#projects"
+                className="flex flex-row gap-2 items-center"
+              >
+                <PanelsTopLeft size={22} /> Projects
+              </Link>
             </Button>
-            <Button size="lg" className="w-full md:w-fit md:px-10">
-              <Link href="https://github.com/ryanbakker" target="_blank">
-                GitHub
+            <Button size="lg" className="w-full md:w-fit md:px-10 text-base">
+              <Link
+                href="https://github.com/ryanbakker"
+                target="_blank"
+                className="flex flex-row gap-2 items-center"
+              >
+                <Github size={22} /> GitHub
               </Link>
             </Button>
           </div>
 
-          <div className="pattern-cross pattern-indigo-700 pattern-bg-white pattern-size-8 pattern-opacity-10 h-full w-full absolute -z-10 left-0 top-0 dark:pattern-bg-black" />
+          <div className="cross-pattern" />
         </div>
       </div>
     </section>

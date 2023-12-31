@@ -1,5 +1,5 @@
-import { headerLinks } from "@/constants";
 import Link from "next/link";
+import { headerLinks } from "@/constants";
 
 function FooterNav() {
   return (

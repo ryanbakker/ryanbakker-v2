@@ -1,8 +1,8 @@
-import { AtSign, Github, Linkedin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Heading from "./Heading";
 import AboutText from "./AboutText";
+import { AtSign, Github, Linkedin } from "lucide-react";
 
 function AboutSection() {
   return (
@@ -14,14 +14,23 @@ function AboutSection() {
           <div>
             <AboutText />
 
-            <div className="flex flex-row space-x-4 pt-4 text-indigo-600">
-              <Link href="https://github.com/ryanbakker">
+            <div className="flex flex-row space-x-4 pt-8 text-indigo-600">
+              <Link
+                href="https://github.com/ryanbakker"
+                className="hover:text-indigo-400 transition-all"
+              >
                 <Github strokeWidth={2.5} aria-label="GitHub" />
               </Link>
-              <Link href="mailto:ryanbakker@outlook.co.nz">
+              <Link
+                href="mailto:ryanbakker@outlook.co.nz"
+                className="hover:text-indigo-400 transition-all"
+              >
                 <AtSign strokeWidth={2.5} aria-label="Email" />
               </Link>
-              <Link href="https://www.linkedin.com/in/ryan-bakker/">
+              <Link
+                href="https://www.linkedin.com/in/ryan-bakker/"
+                className="hover:text-indigo-400 transition-all"
+              >
                 <Linkedin strokeWidth={2.2} aria-label="LinkedIn" />
               </Link>
             </div>
@@ -37,7 +46,7 @@ function AboutSection() {
         />
       </div>
 
-      <div className="pattern-cross pattern-gray-600 pattern-bg-white pattern-size-8 pattern-opacity-5 h-full w-full absolute -z-10 left-0 top-0 dark:pattern-bg-black" />
+      <div className="cross-pattern" />
     </section>
   );
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import {
   Sheet,
   SheetClose,
@@ -13,7 +14,6 @@ import { headerLinks } from "@/constants";
 import { usePathname } from "next/navigation";
 import { ThemeToggler } from "../ThemeToggler";
 import { SignedIn, UserButton } from "@clerk/nextjs";
-import Link from "next/link";
 import { AtSign, Github, Linkedin } from "lucide-react";
 
 function MobileNav() {
@@ -42,9 +42,9 @@ function MobileNav() {
           className="flex flex-col gap-1.5 items-end"
           aria-label="Menu"
         >
-          <div className="dark:bg-white bg-indigo-600 w-[27px] h-[3px] rounded-xl" />
-          <div className="dark:bg-white bg-indigo-600 w-[30px] h-[3px] rounded-xl" />
-          <span className="dark:bg-white bg-indigo-600 w-[22px] h-[3px] rounded-xl" />
+          <div className="dark:bg-white bg-white md:bg-indigo-600 w-[27px] h-[3px] rounded-xl" />
+          <div className="dark:bg-white bg-white md:bg-indigo-600 w-[30px] h-[3px] rounded-xl" />
+          <span className="dark:bg-white bg-white md:bg-indigo-600 w-[22px] h-[3px] rounded-xl" />
         </SheetTrigger>
         <SheetContent className="border-none flex flex-col w-full gap-10 items-center bg-gradient-to-tr from-indigo-800 via-slate-900 to-indigo-950">
           <SheetHeader>

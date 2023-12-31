@@ -1,6 +1,7 @@
 "use client";
 
 import * as z from "zod";
+import Dropdown from "./Dropdown";
 import { IProject } from "@/lib/database/models/project.model";
 import {
   Form,
@@ -19,7 +20,6 @@ import { createProject, updateProject } from "@/lib/actions/project.actions";
 import { projectDefaultValues } from "@/constants";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
-import Dropdown from "./Dropdown";
 import { Textarea } from "../ui/textarea";
 import { FileUploader } from "./FileUploader";
 

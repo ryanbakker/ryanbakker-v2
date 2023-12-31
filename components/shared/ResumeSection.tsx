@@ -25,7 +25,7 @@ function ResumeSection() {
           <Button asChild size="lg">
             <Link
               href="/resume"
-              className="flex gap-2 mt-6 w-full md:w-fit bg-white text-indigo-900 hover:bg-slate-200 z-[100]"
+              className="flex gap-2 mt-6 w-full md:w-fit bg-slate-900 dark:bg-white text-indigo-900 hover:bg-slate-700 dark:hover:bg-slate-200 z-[100]"
               target="_blank"
             >
               <FileText /> Go To Resume
@@ -34,7 +34,7 @@ function ResumeSection() {
           <Button asChild size="lg">
             <Link
               href="/resume"
-              className="flex gap-2 mt-6 w-full md:w-fit bg-white text-indigo-900 hover:bg-slate-200 z-[100]"
+              className="flex gap-2 mt-6 w-full md:w-fit bg-slate-900 dark:bg-white text-indigo-900 hover:bg-slate-700 dark:hover:bg-slate-200 z-[100]"
               target="_blank"
             >
               <Github /> GitHub
