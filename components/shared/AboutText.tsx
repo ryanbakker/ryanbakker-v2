@@ -15,7 +15,7 @@ function AboutText() {
     <>
       <div className="flex flex-col md:hidden">
         <p
-          className={`mt-8 font-light md:max-w-[45vw] overflow-hidden transition-all ${
+          className={`mt-8 font-light md:max-w-[45vw] overflow-hidden transition-all animate-accordion-down ${
             showMore ? "max-h-full" : "max-h-[80px]"
           } ${!showMore && "line-clamp-3"}`}
         >
