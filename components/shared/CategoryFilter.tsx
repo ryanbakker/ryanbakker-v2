@@ -49,10 +49,10 @@ function CategoryFilter() {
 
   return (
     <Select onValueChange={(value: string) => onSelectCategory(value)}>
-      <SelectTrigger className="w-full bg-slate-900 h-[54px] placeholder:text-white text-white rounded-md p-regular-16 px-5 py-3 border-none focus-visible:ring-transparent focus:ring-transparent !important">
+      <SelectTrigger className="w-full bg-indigo-900 h-[54px] placeholder:text-white text-white rounded-md p-regular-16 px-5 py-3 border-none focus-visible:ring-transparent focus:ring-transparent !important">
         <SelectValue placeholder="Category" />
       </SelectTrigger>
-      <SelectContent>
+      <SelectContent className="bg-slate-900">
         <SelectItem
           value="All"
           className="py-3 cursor-pointer focus:bg-primary-50 text-[14px] font-normal leading-[20px]"

@@ -19,6 +19,9 @@ import { SignedIn, UserButton } from "@clerk/nextjs";
 
 function MobileNav() {
   const pathname = usePathname();
+
+  function closeSheet() {}
+
   return (
     <nav className="md:hidden flex flex-row gap-5 items-center">
       <SignedIn>
@@ -56,25 +59,20 @@ function MobileNav() {
 
               return (
                 <li key={link.route} className="w-full flex">
-                  <Link
-                    href={link.route}
-                    className={`w-full text-indigo-600 bg-indigo-50 py-3 text-center rounded-md text-lg ${
-                      isActive && "bg-indigo-700 text-white"
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
+                  <SheetClose asChild>
+                    <Link
+                      href={link.route}
+                      className={`w-full text-indigo-600 bg-indigo-50 py-3 text-center rounded-md text-lg ${
+                        isActive && "bg-indigo-700 text-white"
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  </SheetClose>
                 </li>
               );
             })}
           </ul>
-          <SheetFooter>
-            <SheetClose>
-              <Button className="bg-indigo-500 text-white" size="lg">
-                Close Menu
-              </Button>
-            </SheetClose>
-          </SheetFooter>
         </SheetContent>
       </Sheet>
     </nav>

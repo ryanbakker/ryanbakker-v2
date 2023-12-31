@@ -113,8 +113,8 @@ async function Projects({ params: { id }, searchParams }: SearchParamProps) {
           emptyStateSubtext="Come back later"
           collectionType="All_Projects"
           limit={3}
-          page={searchParams.page as string}
-          totalPages={relatedProjects?.totalPages}
+          page={1}
+          totalPages={1} // Disables pagination
         />
       </section>
     </>

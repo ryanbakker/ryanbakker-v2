@@ -21,7 +21,7 @@ function Card({ project }: CardProps) {
     <div className="group relative flex min-h-[380px] w-full max-w-[400px] flex-col overflow-hidden rounded-xl bg-gradient-to-tr from-indigo-950 to-indigo-900 shadow-md transition-all hover:shadow-2xl md:min-h-[438px] cursor-pointer ">
       <Link
         href={`/projects/${project._id}`}
-        className="overflow-hidden max-h-[260px] flex items-center w-full justify-center"
+        className="overflow-hidden max-h-[260px] flex items-center w-full justify-center shadow-md"
       >
         <Image
           src={project.imageUrl}
@@ -56,8 +56,8 @@ function Card({ project }: CardProps) {
               <p className="line-clamp-2 text-white text-2xl font-bold">
                 {project.title}
               </p>
-              <p className="line-clamp-2 text-white/70 font-light">
-                {formatDate(project.createdAt)}
+              <p className="line-clamp-2 text-white/70 font-light text-sm">
+                Published: {formatDate(project.createdAt)}
               </p>
             </div>
           </Link>
