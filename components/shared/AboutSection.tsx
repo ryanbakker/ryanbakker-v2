@@ -33,7 +33,7 @@ function AboutSection() {
           alt="Ryan Bakker Portrait"
           width={200}
           height={350}
-          className="rounded-md w-[450px] md:max-w-[400px]"
+          className="rounded-md w-[450px] md:max-w-[400px] shadow-xl"
         />
       </div>
 

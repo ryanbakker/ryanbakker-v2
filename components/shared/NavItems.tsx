@@ -16,10 +16,13 @@ function NavItems() {
           <li
             key={link.route}
             className={`${
-              isActive && " border-b-2 border-indigo-500"
-            } flex items-center justify-center whitespace-nowrap py-0.5 px-0  text-black dark:text-white`}
+              isActive && ""
+            } flex items-center justify-center whitespace-nowrap py-0.5 px-0  text-black dark:text-white relative hover:text-indigo-600 hover:brightness-150 transition-all`}
           >
             <Link href={link.route}>{link.label}</Link>
+            {isActive && (
+              <div className="absolute bottom-0 h-[1.5px] rounded-lg w-full bg-gradient-to-r from-indigo-400 to-indigo-700" />
+            )}
           </li>
         );
       })}

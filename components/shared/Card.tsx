@@ -21,7 +21,7 @@ function Card({ project }: CardProps) {
     <div className="group relative flex min-h-[300px] w-full max-w-[400px] flex-col overflow-hidden rounded-xl bg-gradient-to-tr from-indigo-950 to-indigo-900 shadow-md transition-all hover:shadow-2xl md:min-h-[438px] cursor-pointer ">
       <Link
         href={`/projects/${project._id}`}
-        className="overflow-hidden max-h-[250px] flex items-center w-full justify-center shadow-md"
+        className="relative overflow-hidden max-h-[250px] flex items-center w-full justify-center shadow-md"
       >
         <Image
           src={project.imageUrl}
@@ -30,6 +30,7 @@ function Card({ project }: CardProps) {
           height={100}
           className="w-full"
         />
+        <div className="vingette" />
       </Link>
 
       {isProjectCreator && (

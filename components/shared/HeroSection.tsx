@@ -21,12 +21,12 @@ function HeroSection() {
             </p>
           </div>
           <div className="flex items-end justify-center my-10 md:my-10 md:justify-end">
-            <div className="px-5 pt-8 rounded-xl rounded-b-xl bg-gradient-to-tr from-indigo-900 via-slate-900 to-slate-800">
+            <div className="px-5 pt-8 rounded-xl rounded-b-xl bg-gradient-to-tr from-indigo-800 via-slate-900 to-indigo-950">
               <Image
                 src="/assets/images/ryan-bakker-head.webp"
                 alt="Headshot"
-                width={250}
-                height={250}
+                width={400}
+                height={400}
                 className="w-[500px] md:max-w-[350px]"
                 loading="eager"
               />

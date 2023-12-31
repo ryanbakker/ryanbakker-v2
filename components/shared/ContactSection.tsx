@@ -1,5 +1,6 @@
 import Heading from "./Heading";
 import ContactForm from "./ContactForm";
+import Link from "next/link";
 
 function ContactSection() {
   return (
@@ -8,7 +9,15 @@ function ContactSection() {
         <Heading title="Contact" />
         <p className="font-light">
           If you have any queries, feel free to get in touch. Use the contact
-          form below or send me a message on Linkedin.
+          form below or send me a message on{" "}
+          <Link
+            href="https://www.linkedin.com/in/ryan-bakker/"
+            target="_blank"
+            className="underline underline-offset-4 hover:text-indigo-500 transition-all"
+          >
+            LinkedIn
+          </Link>
+          .
         </p>
 
         <ContactForm />

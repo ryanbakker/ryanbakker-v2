@@ -1,6 +1,7 @@
-import CategoryLabel from "@/components/shared/CategoryLabel";
+import CategoryLabelLink from "@/components/shared/CategoryLabelLink";
 import Collection from "@/components/shared/Collection";
 import { DetailsDeleteBtn } from "@/components/shared/DetailsDeleteBtn";
+import Heading from "@/components/shared/Heading";
 import ProjectDescription from "@/components/shared/ProjectDescription";
 import {
   getProjectById,
@@ -32,13 +33,16 @@ async function Projects({ params: { id }, searchParams }: SearchParamProps) {
         {/* Project Details */}
         <section className="text-white flex justify-center flex-col">
           <div className="grid grid-cols-1 md:grid-cols-2 2xl:max-w-7xl">
-            <Image
-              src={project.imageUrl}
-              alt="Project"
-              width={850}
-              height={850}
-              className="h-full w-full object-cover object-center"
-            />
+            <div className="relative">
+              <Image
+                src={project.imageUrl}
+                alt="Project"
+                width={850}
+                height={850}
+                className="h-full w-full object-cover object-center"
+              />
+              <div className="vingette" />
+            </div>
 
             <div className="flex w-full flex-col gap-5 p-5 md:p-10">
               {isProjectCreator && (
@@ -55,7 +59,7 @@ async function Projects({ params: { id }, searchParams }: SearchParamProps) {
               )}
 
               <div className="flex flex-col gap-8">
-                <CategoryLabel category={project.category.name} />
+                <CategoryLabelLink category={project.category.name} />
                 <div>
                   <h2 className="text-2xl md:text-3xl font-bold pb-1 uppercase">
                     {project.title}
@@ -75,7 +79,7 @@ async function Projects({ params: { id }, searchParams }: SearchParamProps) {
                     <Link
                       href={project.githubUrl}
                       target="_blank"
-                      className="bg-indigo-500/40 w-fit py-1 px-4 rounded-md text-violet-100 font-medium hover:bg-indigo-500/40 transition-all"
+                      className="bg-indigo-500/40 w-fit py-1 px-4 rounded-md text-violet-300 hover:bg-indigo-500/60 transition-all"
                     >
                       GitHub Repo
                     </Link>
@@ -85,7 +89,7 @@ async function Projects({ params: { id }, searchParams }: SearchParamProps) {
                     <Link
                       href={project.demoUrl}
                       target="_blank"
-                      className="bg-indigo-500/40 w-fit py-1 px-4 rounded-md text-violet-100 font-medium hover:bg-indigo-500/40 transition-all"
+                      className="bg-indigo-500/40 w-fit py-1 px-4 rounded-md text-violet-300 hover:bg-indigo-500/60 transition-all"
                     >
                       Live Demo
                     </Link>
@@ -97,7 +101,6 @@ async function Projects({ params: { id }, searchParams }: SearchParamProps) {
                 <h5 className="font-extralight text-white/70 text-sm">
                   Project Overview
                 </h5>
-                {/* <p>{project.description}</p> */}
                 <ProjectDescription description={project.description} />
               </div>
             </div>
@@ -106,18 +109,21 @@ async function Projects({ params: { id }, searchParams }: SearchParamProps) {
       </div>
 
       {/* Similar Projects */}
-      <section className="wrapper my-8 flex flex-col gap-8 md:gap-12">
-        <h2 className="text-3xl font-bold text-white">Related Projects</h2>
+      <section className="relative py-14">
+        <div className="wrapper py-8 flex flex-col gap-8 md:gap-12">
+          <Heading title="Related Projects" />
 
-        <Collection
-          data={relatedProjects?.data}
-          emptyTitle="No Projects Found"
-          emptyStateSubtext="Come back later"
-          collectionType="All_Projects"
-          limit={3}
-          page={1}
-          totalPages={1} // Disables pagination
-        />
+          <Collection
+            data={relatedProjects?.data}
+            emptyTitle="No Projects Found"
+            emptyStateSubtext="Come back later"
+            collectionType="All_Projects"
+            limit={3}
+            page={1}
+            totalPages={1} // Disables pagination
+          />
+        </div>
+        <div className="pattern-cross pattern-gray-600 pattern-bg-white pattern-size-8 pattern-opacity-5 h-full w-full absolute -z-10 left-0 top-0 dark:pattern-bg-black" />
       </section>
     </>
   );

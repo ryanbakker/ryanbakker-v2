@@ -205,7 +205,7 @@ function ProjectsForm({ userId, type, project, projectId }: ProjectFormProps) {
           name="description"
           render={({ field }) => (
             <FormItem className="w-full">
-              <FormControl className="h-72 mt-5">
+              <FormControl className="h-[150px] mt-5">
                 <Textarea
                   placeholder="About the project"
                   {...field}
