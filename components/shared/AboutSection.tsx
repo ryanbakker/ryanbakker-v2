@@ -32,14 +32,14 @@ function AboutSection() {
             </p>
 
             <div className="flex flex-row space-x-4 pt-4 text-indigo-600">
-              <Link href="/">
-                <Github strokeWidth={2.5} />
+              <Link href="https://github.com/ryanbakker">
+                <Github strokeWidth={2.5}>Github</Github>
               </Link>
-              <Link href="/">
-                <AtSign strokeWidth={2.5} />
+              <Link href="mailto:ryanbakker@outlook.co.nz">
+                <AtSign strokeWidth={2.5}>Email</AtSign>
               </Link>
-              <Link href="/">
-                <Linkedin strokeWidth={2.2} />
+              <Link href="https://www.linkedin.com/in/ryan-bakker/">
+                <Linkedin strokeWidth={2.2}>LinkedIn</Linkedin>
               </Link>
             </div>
           </div>

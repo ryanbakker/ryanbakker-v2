@@ -29,6 +29,7 @@ function HeroSection() {
                 width={500}
                 height={500}
                 className="md:max-w-[350px]"
+                loading="eager"
               />
             </div>
           </div>

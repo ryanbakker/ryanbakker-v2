@@ -36,7 +36,10 @@ function MobileNav() {
       </SignedIn>
       <ThemeToggler />
       <Sheet>
-        <SheetTrigger className="flex flex-col gap-1.5 items-end">
+        <SheetTrigger
+          className="flex flex-col gap-1.5 items-end"
+          aria-label="Menu"
+        >
           <div className="dark:bg-white bg-indigo-600 w-[27px] h-[3px] rounded-xl" />
           <div className="dark:bg-white bg-indigo-600 w-[30px] h-[3px] rounded-xl" />
           <span className="dark:bg-white bg-indigo-600 w-[22px] h-[3px] rounded-xl" />
