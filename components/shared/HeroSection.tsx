@@ -11,14 +11,13 @@ function HeroSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 min-h-[75vh]">
           <div className="flex flex-col space-y-6 justify-center flex-1">
             <Title />
-            <h2 className="uppercase text-xl md:text-2xl font-extralight text-slate-600 dark:text-slate-400">
+            <h2 className="uppercase sm:text-xl md:text-2xl font-extralight text-slate-600 dark:text-slate-400">
               Working under the hood of websites
             </h2>
             <p className="font-light md:text-lg">
-              Front-end Web Developer residing in Auckland, New Zealand. With
-              experience designing and developing SEO-friendly websites using
-              Next.js 14 and WordPress. Self-learning person, and problem
-              solver, with an attention to detail.
+              Experience designing and developing SEO friendly websites using
+              Next.js and WordPress. Self-learning person, and problem solver,
+              with an attention to detail.
             </p>
           </div>
           <div className="flex items-end justify-center my-10 md:my-10 md:justify-end">
