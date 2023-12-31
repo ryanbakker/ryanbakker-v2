@@ -23,7 +23,7 @@ function ProjectDescription({ description }: { description: string }) {
 
       <Button
         onClick={toggleShowMore}
-        className="w-fit bg-transparent text-white pl-0 py-3 my-2 active:bg-transparent focus:bg-transparent focus-visible:bg-transparent"
+        className="w-fit bg-slate-950 px-0 text-white py-1 my-2 active:bg-transparent focus:bg-transparent focus-visible:bg-transparent cursor-pointer"
       >
         {!showMore ? (
           <p className="flex flex-row items-center">
