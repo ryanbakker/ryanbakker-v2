@@ -6,12 +6,12 @@ import Heading from "./Heading";
 function AboutSection() {
   return (
     <section className="relative py-2">
-      <div className="max-w-7xl lg:mx-auto px-5 md:px-10 xl:px-0 w-full flex flex-row justify-between">
+      <div className="max-w-7xl lg:mx-auto px-5 md:px-10 xl:px-0 w-full flex flex-col md:flex-row justify-between items-center">
         <div className="my-8 flex flex-col justify-center">
           <Heading title="About Me" />
 
           <div>
-            <p className="my-8 font-light max-w-[45vw]">
+            <p className="my-8 font-light md:max-w-[45vw]">
               I am a developer with internship experience and a passion for
               website and app development. With two diplomas in the bank, I will
               embark on my next venture, pursuing a bachelors degree in Software
@@ -48,9 +48,9 @@ function AboutSection() {
         <Image
           src="/assets/images/ryan-bakker-portrait.webp"
           alt="Ryan Bakker Portrait"
-          width={400}
+          width={450}
           height={600}
-          className="rounded-md"
+          className="rounded-md md:max-w-[400px]"
         />
       </div>
 

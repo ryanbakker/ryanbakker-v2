@@ -1,9 +1,7 @@
 import Link from "next/link";
-import { Button } from "../ui/button";
-import ProjectCarousel from "./ProjectCarousel";
 import Heading from "./Heading";
 import Collection from "./Collection";
-import { SearchParamProps } from "@/types";
+import { Button } from "../ui/button";
 import { getAllProjects } from "@/lib/actions/project.actions";
 
 async function ProjectSection() {
@@ -31,14 +29,14 @@ async function ProjectSection() {
           />
         </div>
 
-        <div className="flex flex-row space-x-4">
+        <div className="flex flex-col md:flex-row gap-4 px-20 md:px-0 items-center">
           <Button
             size="lg"
-            className="px-10 bg-indigo-600 hover:bg-indigo-800 transition-all text-white"
+            className="px-10 bg-indigo-600 hover:bg-indigo-800 transition-all text-white w-full md:w-fit"
           >
             <Link href="/projects">View Projects</Link>
           </Button>
-          <Button size="lg" className="px-10">
+          <Button size="lg" className="px-10 w-full md:w-fit">
             <Link href="https://github.com/ryanbakker?tab=repositories">
               GitHub Repos
             </Link>

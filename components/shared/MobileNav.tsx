@@ -12,15 +12,17 @@ import {
 } from "../ui/sheet";
 import { Button } from "../ui/button";
 import { headerLinks } from "@/constants";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
+import { ThemeToggler } from "../ThemeToggler";
 
 function MobileNav() {
   const pathname = usePathname();
   return (
-    <nav className="md:hidden">
+    <nav className="md:hidden flex flex-row gap-5 items-center">
+      <ThemeToggler />
       <Sheet>
-        <SheetTrigger className="flex flex-col justify-between gap-1.5 items-end">
+        <SheetTrigger className="flex flex-col gap-2 items-end">
           <div className="bg-white w-[27px] h-[3px] rounded-xl" />
           <div className="bg-white w-[30px] h-[3px] rounded-xl" />
           <span className="bg-white w-[22px] h-[3px] rounded-xl" />

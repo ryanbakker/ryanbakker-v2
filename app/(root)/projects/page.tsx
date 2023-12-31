@@ -23,7 +23,7 @@ async function Projects({ searchParams }: SearchParamProps) {
         <div className="wrapper flex h-full flex-col gap-4">
           <Heading title="Projects" />
 
-          <p className="max-w-[40%] font-light">
+          <p className="md:max-w-[40%] font-light">
             Below is a selection of my web projects. You can find an overview
             and links to the GitHub repo and Vercel deployment.
           </p>

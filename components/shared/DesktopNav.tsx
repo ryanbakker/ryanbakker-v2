@@ -1,8 +1,7 @@
-import React from "react";
 import NavItems from "./NavItems";
+import Link from "next/link";
 import { SignedIn, UserButton } from "@clerk/nextjs";
 import { Button } from "../ui/button";
-import Link from "next/link";
 import { ThemeToggler } from "../ThemeToggler";
 
 function DesktopNav() {

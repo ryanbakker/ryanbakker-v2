@@ -1,7 +1,8 @@
-import AboutSection from "@/components/shared/AboutSection";
-import ContactSection from "@/components/shared/ContactSection";
 import HeroSection from "@/components/shared/HeroSection";
 import ProjectSection from "@/components/shared/ProjectSection";
+import AboutSection from "@/components/shared/AboutSection";
+import ContactSection from "@/components/shared/ContactSection";
+import ResumeSection from "@/components/shared/ResumeSection";
 
 function Home() {
   return (
@@ -13,6 +14,8 @@ function Home() {
       <AboutSection />
 
       <ContactSection />
+
+      <ResumeSection />
     </>
   );
 }
