@@ -2,8 +2,6 @@
 
 import { useTransition } from "react";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
-
 import {
   AlertDialog,
   AlertDialogAction,
@@ -28,11 +26,11 @@ export const DeleteConfirmation = ({ projectId }: { projectId: string }) => {
         <Trash2 size={20} />
       </AlertDialogTrigger>
 
-      <AlertDialogContent className="bg-white">
+      <AlertDialogContent className="bg-slate-800">
         <AlertDialogHeader>
           <AlertDialogTitle>Are you sure you want to delete?</AlertDialogTitle>
           <AlertDialogDescription className="p-regular-16 text-grey-600">
-            This will permanently delete this event
+            This will permanently delete this project.
           </AlertDialogDescription>
         </AlertDialogHeader>
 

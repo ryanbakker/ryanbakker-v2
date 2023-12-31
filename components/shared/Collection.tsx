@@ -52,7 +52,7 @@ function Collection({
           )}
         </div>
       ) : (
-        <div className="flex items-center justify-center wrapper min-h-[200px] w-full flex-col gap-3 rounded-lg bg-slate-950 text-white py-28 text-center">
+        <div className="flex items-center justify-center wrapper min-h-[200px] w-full flex-col gap-3 rounded-lg bg-indigo-900 text-white py-28 text-center">
           <h3 className="font-semibold text-xl">{emptyTitle}</h3>
           <p className="text-slate-200">{emptyStateSubtext}</p>
         </div>

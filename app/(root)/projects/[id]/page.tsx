@@ -5,6 +5,7 @@ import {
   getProjectById,
   getRelatedProjectsByCategory,
 } from "@/lib/actions/project.actions";
+import { formatDate } from "@/lib/utils";
 import { SearchParamProps } from "@/types";
 import { auth } from "@clerk/nextjs";
 import { FileEdit } from "lucide-react";
@@ -38,7 +39,7 @@ async function Projects({ params: { id }, searchParams }: SearchParamProps) {
               className="h-full w-full object-cover object-center"
             />
 
-            <div className="flex w-full flex-col gap-8 p-5 md:p-10">
+            <div className="flex w-full flex-col gap-5 p-5 md:p-10">
               {isProjectCreator && (
                 <div className=" flex flex-row gap-4">
                   <Link
@@ -54,9 +55,14 @@ async function Projects({ params: { id }, searchParams }: SearchParamProps) {
 
               <div className="flex flex-col gap-5">
                 <CategoryLabel category={project.category.name} />
-                <h2 className="text-3xl font-bold pb-1 uppercase">
-                  {project.title}
-                </h2>
+                <div>
+                  <h2 className="text-3xl font-bold pb-1 uppercase">
+                    {project.title}
+                  </h2>
+                  <p className="italic text-gray-400">
+                    Published: {formatDate(project.createdAt)}
+                  </p>
+                </div>
               </div>
 
               <div className="flex flex-row gap-3 items-center">
@@ -87,8 +93,6 @@ async function Projects({ params: { id }, searchParams }: SearchParamProps) {
                 </h5>
                 <p>{project.description}</p>
               </div>
-
-              {/* <ProjectButtons project={project} /> */}
             </div>
           </div>
         </section>

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { DeleteConfirmation } from "./DeleteConfirmation";
 import CategoryLabel from "./CategoryLabel";
 import Image from "next/image";
+import { formatDate } from "@/lib/utils";
 
 type CardProps = {
   project: IProject;
@@ -58,22 +59,10 @@ function Card({ project, hasOrderLink, hidePrice }: CardProps) {
                 {project.title}
               </p>
               <p className="line-clamp-2 text-white/70 font-light">
-                {project.description}
+                {formatDate(project.createdAt)}
               </p>
             </div>
           </Link>
-        </div>
-
-        <div className="flex flex-row justify-between items-end">
-          {hasOrderLink && (
-            <Link
-              href={`/orders?projectId=${project._id}`}
-              className="gap-2 bg-white w-fit flex items-center py-1 px-3 rounded-md mt-4 hover:bg-slate-300 transition-all line-clamp-1"
-            >
-              <p className="text-slate-900">Order Details</p>
-              <ArrowUpRight size={16} />
-            </Link>
-          )}
         </div>
       </div>
     </div>
