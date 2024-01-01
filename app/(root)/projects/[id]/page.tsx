@@ -38,8 +38,8 @@ async function Projects({ params: { id }, searchParams }: SearchParamProps) {
               <Image
                 src={project.imageUrl}
                 alt="Project"
-                width={850}
-                height={850}
+                width={750}
+                height={750}
                 className="h-full w-full object-cover object-center"
               />
               <div className="vingette" />
@@ -109,7 +109,9 @@ async function Projects({ params: { id }, searchParams }: SearchParamProps) {
       {/* Similar Projects */}
       <section className="relative py-14">
         <div className="wrapper py-8 flex flex-col gap-8 md:gap-12">
-          <Heading title="Related Projects" />
+          <h3 className="text-3xl md:text-4xl font-semibold uppercase text-indigo-500">
+            Related Projects
+          </h3>
 
           <Collection
             data={relatedProjects?.data}

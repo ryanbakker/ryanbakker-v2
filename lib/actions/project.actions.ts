@@ -11,7 +11,7 @@ import {
 import Category from "../database/models/category.model";
 import User from "../database/models/user.model";
 import { handleError } from "../utils";
-import { conntectToDB } from "../database";
+import { connectToDB } from "../database";
 import Project from "../database/models/project.model";
 import { revalidatePath } from "next/cache";
 
@@ -35,7 +35,7 @@ export async function createProject({
   path,
 }: CreateProjectParams) {
   try {
-    await conntectToDB();
+    await connectToDB();
 
     const organizer = await User.findById(userId);
     if (!organizer) throw new Error("Organizer not found");
@@ -55,7 +55,7 @@ export async function createProject({
 
 export async function getProjectById(projectId: string) {
   try {
-    await conntectToDB();
+    await connectToDB();
 
     const project = await populateProject(Project.findById(projectId));
 
@@ -73,7 +73,7 @@ export async function updateProject({
   path,
 }: UpdateProjectParams) {
   try {
-    await conntectToDB();
+    await connectToDB();
 
     const projectToUpdate = await Project.findById(project._id);
     if (
@@ -98,7 +98,7 @@ export async function updateProject({
 
 export async function deleteProject({ projectId, path }: DeleteProjectParams) {
   try {
-    await conntectToDB();
+    await connectToDB();
 
     const deletedProject = await Project.findByIdAndDelete(projectId);
     if (deletedProject) revalidatePath(path);
@@ -114,7 +114,7 @@ export async function getAllProjects({
   category,
 }: GetAllProjectsParams) {
   try {
-    await conntectToDB();
+    await connectToDB();
 
     const titleCondition = query
       ? { title: { $regex: query, $options: "i" } }
@@ -153,7 +153,7 @@ export async function getProjectsByUser({
   page,
 }: GetProjectsByUserParams) {
   try {
-    await conntectToDB();
+    await connectToDB();
 
     const conditions = { organizer: userId };
     const skipAmount = (page - 1) * limit;
@@ -182,7 +182,7 @@ export async function getRelatedProjectsByCategory({
   page = 1,
 }: GetRelatedProjectsByCategoryParams) {
   try {
-    await conntectToDB();
+    await connectToDB();
 
     const skipAmount = (Number(page) - 1) * limit;
     const conditions = {

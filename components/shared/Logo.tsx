@@ -5,7 +5,7 @@ function Logo() {
     <div>
       <Link
         href="/"
-        className="text-2xl font-semibold uppercase text-indigo-100 md:text-indigo-950 dark:text-indigo-100"
+        className="text-2xl font-semibold uppercase text-indigo-100 md:text-indigo-950 dark:text-indigo-100 hover:text-white transition-all"
       >
         Ryan Bakker
       </Link>

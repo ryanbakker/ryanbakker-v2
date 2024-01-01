@@ -26,8 +26,8 @@ function Card({ project }: CardProps) {
         <Image
           src={project.imageUrl}
           alt={project.title}
-          width={200}
-          height={100}
+          width={300}
+          height={150}
           className="w-full"
         />
         <div className="vingette" />
@@ -46,21 +46,21 @@ function Card({ project }: CardProps) {
         </div>
       )}
 
-      <div className="flex flex-col justify-between gap-3 p-5 md:gap-4">
+      <div className="flex flex-col justify-between gap-3 px-5 pt-5 md:gap-4">
         <div className="flex flex-col gap-3 h-full">
           <Link
             href={`/projects/${project._id}`}
-            className="flex flex-col justify-between min-h-[130px]"
+            className="flex flex-col justify-between min-h-[150px]"
           >
             <CategoryLabel category={project.category.name} />
-            <div className="h-full flex flex-col justify-end gap-5">
+            <div className="h-full flex flex-col gap-5 flex-1 pt-4">
               <p className="line-clamp-2 text-white text-2xl font-bold">
                 {project.title}
               </p>
-              <p className="line-clamp-2 text-white/70 font-light text-sm">
-                Published: {formatDate(project.createdAt)}
-              </p>
             </div>
+            <p className="line-clamp-2 text-white/70 font-light text-sm">
+              Published: {formatDate(project.createdAt)}
+            </p>
           </Link>
         </div>
       </div>

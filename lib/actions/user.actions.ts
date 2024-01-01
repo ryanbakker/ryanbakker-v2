@@ -2,14 +2,14 @@
 
 import { CreateUserParams, UpdateUserParams } from "@/types";
 import { handleError } from "../utils";
-import { conntectToDB } from "../database";
+import { connectToDB } from "../database";
 import User from "../database/models/user.model";
 import Project from "../database/models/project.model";
 import { revalidatePath } from "next/cache";
 
 export async function createUser(user: CreateUserParams) {
   try {
-    await conntectToDB();
+    await connectToDB();
 
     const newUser = await User.create(user);
 
@@ -21,7 +21,7 @@ export async function createUser(user: CreateUserParams) {
 
 export async function getUserById(userId: string) {
   try {
-    await conntectToDB();
+    await connectToDB();
 
     const user = await User.findById(userId);
 
@@ -35,7 +35,7 @@ export async function getUserById(userId: string) {
 
 export async function updateUser(clerkId: string, user: UpdateUserParams) {
   try {
-    await conntectToDB();
+    await connectToDB();
 
     const updatedUser = await User.findByIdAndUpdate({ clerkId }, user, {
       new: true,
@@ -51,7 +51,7 @@ export async function updateUser(clerkId: string, user: UpdateUserParams) {
 
 export async function deleteUser(clerkId: string) {
   try {
-    await conntectToDB();
+    await connectToDB();
 
     // Find user to delete
     const userToDelete = await User.findOne({ clerkId });

@@ -15,7 +15,7 @@ function ProjectDescription({ description }: { description: string }) {
     <>
       <div className="flex flex-col md:hidden">
         <p
-          className={`md:max-w-[45vw] overflow-hidden transition-all animate-accordion-down leading-relaxed ${
+          className={`md:max-w-[45vw] overflow-hidden transition-transform animate-accordion-down leading-relaxed duration-200 ${
             showMore ? "max-h-full" : "max-h-[80px]"
           } ${!showMore && "line-clamp-2"}`}
         >
