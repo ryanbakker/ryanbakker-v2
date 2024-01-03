@@ -15,9 +15,9 @@ function HeroSection() {
               Working under the hood of websites
             </h2>
             <p className="font-light md:text-lg">
-              Experience designing and developing SEO friendly websites using
-              Next.js and WordPress. Self-learning person, and problem solver,
-              with an attention to detail.
+              Experience with designing and developing SEO-friendly websites
+              using Next.js and WordPress. Self-learning person and problem
+              solver with an attention to detail.
             </p>
           </div>
           <div className="flex items-end justify-center my-10 md:my-10 md:justify-end">

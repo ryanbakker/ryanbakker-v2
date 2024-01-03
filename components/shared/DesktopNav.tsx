@@ -17,6 +17,7 @@ function DesktopNav() {
           >
             <Link href="/projects/create">Create Project</Link>
           </Button>
+
           <div className="border border-indigo-600 rounded-full p-1">
             <UserButton afterSignOutUrl="/" />
           </div>

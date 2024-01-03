@@ -20,22 +20,23 @@ function AboutText() {
           } ${!showMore && "line-clamp-3"}`}
         >
           I am a developer with internship experience and a passion for website
-          and app development. With two diplomas in the bank, I will embark on
-          my next venture, pursuing a bachelors degree in Software Engineering
-          starting in July.
+          and app development. With two diplomas in the bank and experience with
+          a professional team, I am ready to embark on my next adventure in a
+          permanent position.
           <br />
           <br />
-          I have a strong WordPress and React development foundation and gained
-          experience in Adobe, Figma, and Github. Currently, I am focused on
-          expanding my skillset. Learning the new Next.js 13 framework, paired
-          with TypeScript and TailwindCSS. You can find examples of my work on
-          my Github profile.
+          I have strong React and WordPress foundation skills and proficient
+          experience with design tools and GitHub. I primarily focus on the
+          Next.js framework, paired with Typescript and Tailwind CSS. You can
+          find examples of this within my projects or my GitHub profile.
           <br />
           <br />
           In addition to technical skills, I have experience working with Agile
           and Scrum methodologies, which I used during team projects in my
           diplomas. I am excited to continue expanding my skills through
-          learning and development opportunities.
+          learning and development opportunities. Currently, I am actively
+          seeking out a developer role. If you have any opportunities available,
+          please let me know. I would be glad to hear from you.
         </p>
 
         <Button
@@ -58,22 +59,23 @@ function AboutText() {
       <div className="hidden md:flex flex-col">
         <p className="mt-8 font-light md:max-w-[45vw]">
           I am a developer with internship experience and a passion for website
-          and app development. With two diplomas in the bank, I will embark on
-          my next venture, pursuing a bachelors degree in Software Engineering
-          starting in July.
+          and app development. With two diplomas in the bank and experience with
+          a professional team, I am ready to embark on my next adventure in a
+          permanent position.
           <br />
           <br />
-          I have a strong WordPress and React development foundation and gained
-          experience in Adobe, Figma, and Github. Currently, I am focused on
-          expanding my skillset. Learning the new Next.js 13 framework, paired
-          with TypeScript and TailwindCSS. You can find examples of my work on
-          my Github profile.
+          I have strong React and WordPress foundation skills and proficient
+          experience with design tools and GitHub. I primarily focus on the
+          Next.js framework, paired with Typescript and Tailwind CSS. You can
+          find examples of this within my projects or my GitHub profile.
           <br />
           <br />
           In addition to technical skills, I have experience working with Agile
           and Scrum methodologies, which I used during team projects in my
           diplomas. I am excited to continue expanding my skills through
-          learning and development opportunities.
+          learning and development opportunities. Currently, I am actively
+          seeking out a developer role. If you have any opportunities available,
+          please let me know. I would be glad to hear from you.
         </p>
       </div>
     </>
