@@ -46,7 +46,7 @@ function Card({ project }: CardProps) {
         </div>
       )}
 
-      <div className="flex flex-col justify-between gap-3 px-5 pt-5 md:gap-4">
+      <div className="flex flex-col justify-between gap-3 px-5 py-5 md:gap-4">
         <div className="flex flex-col gap-3 h-full">
           <Link
             href={`/projects/${project._id}`}
