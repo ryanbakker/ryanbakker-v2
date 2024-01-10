@@ -89,7 +89,17 @@ async function Projects({ params: { id }, searchParams }: SearchParamProps) {
                       target="_blank"
                       className="bg-indigo-500/40 w-fit py-1 px-4 rounded-md text-violet-300 hover:bg-indigo-500/60 transition-all flex flex-row gap-2 items-center"
                     >
-                      <LinkIcon size={18} /> Live Demo
+                      <LinkIcon size={18} /> Project Demo
+                    </Link>
+                  )}
+
+                  {project.buildUrl && (
+                    <Link
+                      href={project.buildUrl}
+                      target="_blank"
+                      className="bg-indigo-500/40 w-fit py-1 px-4 rounded-md text-violet-300 hover:bg-indigo-500/60 transition-all flex flex-row gap-2 items-center"
+                    >
+                      <LinkIcon size={18} /> Live Build
                     </Link>
                   )}
                 </div>

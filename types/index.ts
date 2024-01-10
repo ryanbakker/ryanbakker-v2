@@ -25,6 +25,7 @@ export type CreateProjectParams = {
     categoryId: string;
     githubUrl: string;
     demoUrl: string;
+    buildUrl: string;
   };
   path: string;
 };

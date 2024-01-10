@@ -35,7 +35,7 @@ function Search({ placeholder = "Search title..." }: { placeholder?: string }) {
   }, [query, searchParams, router]);
 
   return (
-    <div className="flex items-center justify-center min-h-[54px] w-full overflow-hidden rounded-md px-4 py-1 bg-indigo-900">
+    <div className="flex items-center justify-center min-h-[54px] w-full overflow-hidden rounded-md px-4 py-1 bg-slate-800">
       <SearchIcon size={24} stroke="white" />
       <Input
         type="text"

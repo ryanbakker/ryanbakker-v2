@@ -28,4 +28,5 @@ export const projectDefaultValues = {
   categoryId: "",
   githubUrl: "",
   demoUrl: "",
+  buildUrl: "",
 };

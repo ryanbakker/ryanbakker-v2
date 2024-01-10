@@ -171,7 +171,24 @@ function ProjectsForm({ userId, type, project, projectId }: ProjectFormProps) {
                 <FormItem className="w-full">
                   <FormControl>
                     <Input
-                      placeholder="Showcase URL"
+                      placeholder="Demo URL"
+                      {...field}
+                      className="input-field"
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="buildUrl"
+              render={({ field }) => (
+                <FormItem className="w-full">
+                  <FormControl>
+                    <Input
+                      placeholder="Build URL"
                       {...field}
                       className="input-field"
                     />

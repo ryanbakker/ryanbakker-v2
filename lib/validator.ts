@@ -10,4 +10,5 @@ export const projectFormSchema = z.object({
   categoryId: z.string(),
   githubUrl: z.string(),
   demoUrl: z.string(),
+  buildUrl: z.string(),
 });

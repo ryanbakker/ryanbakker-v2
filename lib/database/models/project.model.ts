@@ -8,6 +8,7 @@ export interface IProject extends Document {
   imageUrl: string;
   githubUrl?: string;
   demoUrl?: string;
+  buildUrl?: string;
   category: { _id: string; name: string };
   organizer: {
     _id: string;
@@ -24,6 +25,7 @@ const ProjectSchema = new Schema({
   imageUrl: { type: String, required: true },
   githubUrl: { type: String },
   demoUrl: { type: String },
+  buildUrl: { type: String },
   url: { type: String },
   category: { type: Schema.Types.ObjectId, ref: "Category" },
   organizer: { type: Schema.Types.ObjectId, ref: "User" },
