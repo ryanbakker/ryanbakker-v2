@@ -13,7 +13,7 @@ function Footer() {
             Ryan Bakker
           </Link>
           <p className="text-xs text-slate-400 font-extralight">
-            All Rights Reserved 2023
+            All Rights Reserved 2024
           </p>
         </div>
 
