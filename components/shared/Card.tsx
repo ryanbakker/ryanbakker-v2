@@ -18,7 +18,7 @@ function Card({ project }: CardProps) {
   const isProjectCreator = userId === project.organizer._id.toString();
 
   return (
-    <div className="group relative flex min-h-[300px] w-full max-w-[400px] flex-col overflow-hidden rounded-xl bg-gradient-to-tr from-indigo-950 to-indigo-900 shadow-md transition-all hover:shadow-2xl md:min-h-[438px] cursor-pointer ">
+    <div className="group relative flex min-h-[300px] w-full max-w-[400px] flex-col overflow-hidden rounded-xl bg-gradient-to-tr from-indigo-950 to-indigo-900 shadow-md hover:shadow-2xl hover:scale-[1.01] md:min-h-[438px] cursor-pointer hover:bg-gradient-to-tr hover:from-indigo-950 hover:to-indigo-800 transition-all">
       <Link
         href={`/projects/${project._id}`}
         className="relative overflow-hidden max-h-[250px] flex items-center w-full justify-center shadow-md"
