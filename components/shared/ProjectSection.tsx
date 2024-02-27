@@ -39,10 +39,10 @@ async function ProjectSection() {
               <PanelsTopLeft size={22} /> Go to Projects
             </Link>
           </Button>
-          <Button size="lg" className="px-10 w-full md:w-fit">
+          <Button size="lg" className="px-10 w-full md:w-fit" asChild>
             <Link
               href="https://github.com/ryanbakker?tab=repositories"
-              className="flex flex-row gap-2 items-center"
+              className="flex flex-row gap-2 items-center bg-slate-900 dark:bg-white text-indigo-900 hover:text-indigo-600 hover:bg-indigo-50"
             >
               <Github size={22} /> GitHub Repos
             </Link>

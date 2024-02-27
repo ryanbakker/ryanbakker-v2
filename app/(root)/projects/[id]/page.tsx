@@ -77,7 +77,7 @@ async function Projects({ params: { id }, searchParams }: SearchParamProps) {
                     <Link
                       href={project.githubUrl}
                       target="_blank"
-                      className="bg-indigo-500/40 w-fit py-1 px-4 rounded-md text-violet-300 hover:bg-indigo-500/60 transition-all flex flex-row gap-2 items-center"
+                      className="bg-indigo-500/40 w-fit py-1 px-4 rounded-md text-violet-300 hover:bg-indigo-500/60 transition-all flex flex-row gap-2 items-center hover:text-violet-200"
                     >
                       <Github size={18} /> GitHub Repo
                     </Link>
@@ -87,7 +87,7 @@ async function Projects({ params: { id }, searchParams }: SearchParamProps) {
                     <Link
                       href={project.demoUrl}
                       target="_blank"
-                      className="bg-indigo-500/40 w-fit py-1 px-4 rounded-md text-violet-300 hover:bg-indigo-500/60 transition-all flex flex-row gap-2 items-center"
+                      className="bg-indigo-500/40 w-fit py-1 px-4 rounded-md text-violet-300 hover:bg-indigo-500/60 transition-all flex flex-row gap-2 items-center hover:text-violet-200"
                     >
                       <LinkIcon size={18} /> Project Demo
                     </Link>
@@ -97,7 +97,7 @@ async function Projects({ params: { id }, searchParams }: SearchParamProps) {
                     <Link
                       href={project.buildUrl}
                       target="_blank"
-                      className="bg-indigo-500/40 w-fit py-1 px-4 rounded-md text-violet-300 hover:bg-indigo-500/60 transition-all flex flex-row gap-2 items-center"
+                      className="bg-indigo-500/40 w-fit py-1 px-4 rounded-md text-violet-300 hover:bg-indigo-500/60 transition-all flex flex-row gap-2 items-center hover:text-violet-200"
                     >
                       <LinkIcon size={18} /> Live Build
                     </Link>

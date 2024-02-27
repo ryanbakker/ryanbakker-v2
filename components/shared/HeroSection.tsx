@@ -45,11 +45,15 @@ function HeroSection() {
                 <PanelsTopLeft size={22} /> Projects
               </Link>
             </Button>
-            <Button size="lg" className="w-full md:w-fit md:px-10 text-base">
+            <Button
+              size="lg"
+              asChild
+              className="w-full md:w-fit md:px-10 text-base"
+            >
               <Link
                 href="https://github.com/ryanbakker"
                 target="_blank"
-                className="flex flex-row gap-2 items-center"
+                className="flex flex-row gap-2 items-center bg-slate-900 dark:bg-white text-indigo-900 z-[100] hover:text-indigo-600 hover:bg-indigo-50"
               >
                 <Github size={22} /> GitHub
               </Link>
