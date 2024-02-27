@@ -21,14 +21,13 @@ function AboutText() {
         >
           I am a developer with internship experience and a passion for website
           and app development. With two diplomas in the bank and experience with
-          a professional team, I am ready to embark on my next adventure in a
-          permanent position.
+          a professional team, I am ready to embark on my next adventure.
           <br />
           <br />
-          I have strong React and WordPress foundation skills and proficient
-          experience with design tools and GitHub. I primarily focus on the
-          Next.js framework, paired with Typescript and Tailwind CSS. You can
-          find examples of this within my projects or my GitHub profile.
+          I have strong React / Next.js and WordPress foundation skills and
+          proficient experience with design tools and GitHub. I primarily focus
+          on the Next.js framework, paired with Typescript and Tailwind CSS. You
+          can find examples of this within my projects or my GitHub profile.
           <br />
           <br />
           In addition to technical skills, I have experience working with Agile
@@ -60,14 +59,13 @@ function AboutText() {
         <p className="mt-8 font-light md:max-w-[45vw]">
           I am a developer with internship experience and a passion for website
           and app development. With two diplomas in the bank and experience with
-          a professional team, I am ready to embark on my next adventure in a
-          permanent position.
+          a professional team, I am ready to embark on my next adventure.
           <br />
           <br />
-          I have strong React and WordPress foundation skills and proficient
-          experience with design tools and GitHub. I primarily focus on the
-          Next.js framework, paired with Typescript and Tailwind CSS. You can
-          find examples of this within my projects or my GitHub profile.
+          I have strong React / Next.js and WordPress foundation skills and
+          proficient experience with design tools and GitHub. I primarily focus
+          on the Next.js framework, paired with Typescript and Tailwind CSS. You
+          can find examples of this within my projects or my GitHub profile.
           <br />
           <br />
           In addition to technical skills, I have experience working with Agile
