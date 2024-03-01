@@ -30,7 +30,7 @@ async function Projects({ params: { id }, searchParams }: SearchParamProps) {
 
   return (
     <>
-      <div className="bg-slate-950">
+      <article className="bg-slate-950">
         {/* Project Details */}
         <section className="text-white flex justify-center flex-col">
           <div className="grid grid-cols-1 md:grid-cols-2 2xl:max-w-7xl">
@@ -59,17 +59,17 @@ async function Projects({ params: { id }, searchParams }: SearchParamProps) {
                 </div>
               )}
 
-              <div className="flex flex-col gap-8">
+              <header className="flex flex-col gap-8">
                 <CategoryLabelLink category={project.category.name} />
                 <div>
-                  <h2 className="text-2xl md:text-3xl font-bold pb-1 uppercase">
+                  <h1 className="text-2xl md:text-3xl font-bold pb-1 uppercase">
                     {project.title}
-                  </h2>
+                  </h1>
                   <p className="italic text-gray-400 text-sm">
                     Published: {formatDate(project.createdAt)}
                   </p>
                 </div>
-              </div>
+              </header>
 
               <div className="pt-2">
                 <div className="flex flex-row gap-3 items-center">
@@ -114,7 +114,7 @@ async function Projects({ params: { id }, searchParams }: SearchParamProps) {
             </div>
           </div>
         </section>
-      </div>
+      </article>
 
       {/* Similar Projects */}
       <section className="relative py-14">
