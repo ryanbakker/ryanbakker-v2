@@ -6,6 +6,9 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 export const metadata: Metadata = {
   title: "Ryan Bakker - Web Developer",
   description: "My portfolio of web projects",
+  other: {
+    me: "https://mastodon.social/@ryanbakker",
+  },
 };
 
 export default function RootLayout({
