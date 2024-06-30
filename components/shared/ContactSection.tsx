@@ -9,7 +9,7 @@ function ContactSection() {
         <Heading title="Contact" />
         <p className="font-light">
           If you have any queries, feel free to get in touch. Email me using the
-          contact form below or send a message on{" "}
+          link below or send a message on{" "}
           <Link
             href="https://www.linkedin.com/in/ryan-bakker/"
             target="_blank"
@@ -20,7 +20,12 @@ function ContactSection() {
           .
         </p>
 
-        <ContactForm />
+        <Link
+          href="mailto:rmbakker2002@gmail.com"
+          className=" underline underline-offset-8 hover:text-indigo-400 transition-all mt-8"
+        >
+          rmbakker2002@gmail.com
+        </Link>
       </div>
     </section>
   );
