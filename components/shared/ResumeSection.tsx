@@ -9,15 +9,14 @@ function ResumeSection() {
         <div>
           <div className="relative opacity-100 z-[300]">
             <span className="absolute bottom-0 text-6xl opacity-20 font-bold uppercase text-gray-500 dark:opacity-20">
-              Resume
+              GitHub
             </span>
             <h3 className="text-4xl font-semibold uppercase text-white z-[200] opacity-100">
-              Resume
+              GitHub
             </h3>
           </div>
           <p className="mt-5 text-white mr-10">
-            Check out my resume for my education and experience, or my projects
-            on GitHub.
+            You can find the code for my projects on GitHub:
           </p>
         </div>
 
@@ -28,16 +27,7 @@ function ResumeSection() {
               className="flex gap-2 mt-6 w-full md:w-fit bg-slate-900 dark:bg-white text-indigo-900 z-[100] hover:text-indigo-600 hover:bg-indigo-50"
               target="_blank"
             >
-              <FileText /> Go To Resume
-            </Link>
-          </Button>
-          <Button asChild size="lg">
-            <Link
-              href="/resume"
-              className="flex gap-2 mt-6 w-full md:w-fit bg-slate-900 dark:bg-white text-indigo-900 z-[100] hover:text-indigo-600 hover:bg-indigo-50"
-              target="_blank"
-            >
-              <Github /> GitHub Profile
+              <Github /> Go to GitHub
             </Link>
           </Button>
         </div>

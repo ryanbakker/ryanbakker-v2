@@ -15,10 +15,6 @@ export const headerLinks = [
     label: "Contact",
     route: "/#contact",
   },
-  {
-    label: "Resume",
-    route: "/resume",
-  },
 ];
 
 export const projectDefaultValues = {

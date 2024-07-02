@@ -17,7 +17,7 @@ function ContactSection() {
           >
             LinkedIn
           </Link>
-          .
+          . My resume can be provided upon request.
         </p>
 
         <Link
