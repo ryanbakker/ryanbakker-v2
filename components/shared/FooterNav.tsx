@@ -14,6 +14,11 @@ function FooterNav() {
           </li>
         );
       })}
+      <li className="flex items-center justify-center whitespace-nowrap py-1.5 px-20 md:px-5 rounded-md text-black/70 dark:text-white/70 w-full md:w-fit xs:text-lg hover:text-indigo-500 hover:brightness-125 transition-all">
+        <Link href="https://mastodon.social/@ryanbakker" rel="me">
+          Mastodon
+        </Link>
+      </li>
     </ul>
   );
 }
