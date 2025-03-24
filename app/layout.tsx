@@ -24,7 +24,7 @@ export default function RootLayout({
         },
       }}
     >
-      <html lang="en">
+      <html lang="en" suppressHydrationWarning>
         <body className="bg-[#EEEEEE] dark:bg-[#1A1C29]">
           <ThemeProvider
             attribute="class"
